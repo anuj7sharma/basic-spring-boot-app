@@ -14,7 +14,6 @@ import javax.validation.Valid;
 import java.util.Optional;
 
 @Service
-@Validated
 public class UserService implements IUserService {
     private static final Logger logger = LoggerFactory.getLogger(UserService.class);
     private final UserRepository userRepository;
