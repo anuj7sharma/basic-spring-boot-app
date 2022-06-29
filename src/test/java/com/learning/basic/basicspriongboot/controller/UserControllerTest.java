@@ -3,6 +3,7 @@ package com.learning.basic.basicspriongboot.controller;
 import com.learning.basic.basicspriongboot.entity.UserEntity;
 import com.learning.basic.basicspriongboot.exception.BadRequestException;
 import com.learning.basic.basicspriongboot.model.RegisterRequest;
+import com.learning.basic.basicspriongboot.model.RegisterResponse;
 import com.learning.basic.basicspriongboot.repository.UserRepository;
 import com.learning.basic.basicspriongboot.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,11 +14,8 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.beanvalidation.MethodValidationPostProcessor;
 
 import java.util.Optional;
 
@@ -53,7 +51,7 @@ public class UserControllerTest {
         when(userRepository.save(userEntity)).thenReturn(userEntity);
 
         // Act
-        ResponseEntity responseEntity = userController.register(request);
+        ResponseEntity<RegisterResponse> responseEntity = userController.register(request);
 
         // Assert
         assertAll("Registration should be successful",
