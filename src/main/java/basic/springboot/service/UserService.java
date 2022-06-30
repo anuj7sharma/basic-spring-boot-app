@@ -1,14 +1,13 @@
-package com.learning.basic.basicspriongboot.service;
+package basic.springboot.service;
 
-import com.learning.basic.basicspriongboot.entity.UserEntity;
-import com.learning.basic.basicspriongboot.exception.BadRequestException;
-import com.learning.basic.basicspriongboot.model.RegisterRequest;
-import com.learning.basic.basicspriongboot.model.RegisterResponse;
-import com.learning.basic.basicspriongboot.repository.UserRepository;
+import basic.springboot.entity.UserEntity;
+import basic.springboot.exception.BadRequestException;
+import basic.springboot.model.RegisterRequest;
+import basic.springboot.model.RegisterResponse;
+import basic.springboot.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.annotation.Validated;
 
 import javax.validation.Valid;
 import java.util.Optional;

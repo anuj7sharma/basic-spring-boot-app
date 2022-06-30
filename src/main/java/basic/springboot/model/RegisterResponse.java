@@ -1,4 +1,4 @@
-package com.learning.basic.basicspriongboot.model;
+package basic.springboot.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

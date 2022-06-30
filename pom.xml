@@ -8,10 +8,10 @@
 		<version>2.7.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.learning.basic</groupId>
-	<artifactId>basic-spriong-boot</artifactId>
+	<groupId>basic.springboot</groupId>
+	<artifactId>basic-spring-boot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>basic-spriong-boot</name>
+	<name>basic-spring-boot</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -25,7 +25,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
@@ -39,15 +38,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate.validator</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>6.0.13.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>

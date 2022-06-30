@@ -1,4 +1,4 @@
-package com.learning.basic.basicspriongboot.model;
+package basic.springboot.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,7 +16,7 @@ import javax.validation.constraints.Size;
 public class RegisterRequest {
     public static final String EMAIL_REGEX = "\\b[\\w.%-]+@[-.\\w]+\\.[A-Za-z]{2,4}\\b";
     @Size(min = 2, max = 30)
-    @NotBlank
+    @NotBlank(message = "Name length should be in between 2-30")
     private String firstName;
     @Size(min = 2, max = 30)
     @NotBlank

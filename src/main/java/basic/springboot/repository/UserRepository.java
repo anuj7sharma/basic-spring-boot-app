@@ -1,6 +1,6 @@
-package com.learning.basic.basicspriongboot.repository;
+package basic.springboot.repository;
 
-import com.learning.basic.basicspriongboot.entity.UserEntity;
+import basic.springboot.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

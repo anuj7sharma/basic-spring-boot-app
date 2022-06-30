@@ -1,4 +1,4 @@
-package com.learning.basic.basicspriongboot.exception;
+package basic.springboot.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

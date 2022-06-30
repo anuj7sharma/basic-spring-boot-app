@@ -1,11 +1,11 @@
-package com.learning.basic.basicspriongboot.controller;
+package basic.springboot.controller;
 
-import com.learning.basic.basicspriongboot.entity.UserEntity;
-import com.learning.basic.basicspriongboot.exception.BadRequestException;
-import com.learning.basic.basicspriongboot.model.RegisterRequest;
-import com.learning.basic.basicspriongboot.model.RegisterResponse;
-import com.learning.basic.basicspriongboot.repository.UserRepository;
-import com.learning.basic.basicspriongboot.service.UserService;
+import basic.springboot.entity.UserEntity;
+import basic.springboot.exception.BadRequestException;
+import basic.springboot.model.RegisterRequest;
+import basic.springboot.model.RegisterResponse;
+import basic.springboot.repository.UserRepository;
+import basic.springboot.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -16,6 +16,7 @@ import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.HttpClientErrorException.BadRequest;
 
 import java.util.Optional;
 
@@ -81,27 +82,20 @@ public class UserControllerTest {
         String lastName = "Sharma";
         String email = "anuj@gmail.com";
         RegisterRequest request = new RegisterRequest(firstName, lastName, email);
-        UserEntity userEntity = new UserEntity(request.getFirstName(), request.getLastName(), request.getEmail());
-        when(userRepository.findByEmail(anyString())).thenReturn(Optional.empty());
-        when(userRepository.save(userEntity)).thenReturn(userEntity);
 
         // Act, Assert
-        assertThrows(Exception.class, () -> userController.register(request));
+        assertThrows(BadRequest.class, () -> userController.register(request));
     }
 
     @Test
-    @Disabled
     void register_GivenInvalidEmailFormat_ReturnBadRequest() {
         // Arrange
         String firstName = "Anuj";
         String lastName = "Sharma";
         String email = "abc.com";
         RegisterRequest request = new RegisterRequest(firstName, lastName, email);
-        UserEntity userEntity = new UserEntity(request.getFirstName(), request.getLastName(), request.getEmail());
-        when(userRepository.findByEmail(anyString())).thenReturn(Optional.empty());
-        when(userRepository.save(userEntity)).thenReturn(userEntity);
 
         // Act, Assert
-        assertThrows(Exception.class, () -> userController.register(request));
+        assertThrows(BadRequest.class, () -> userController.register(request));
     }
 }

@@ -1,8 +1,8 @@
-package com.learning.basic.basicspriongboot.controller;
+package basic.springboot.controller;
 
-import com.learning.basic.basicspriongboot.model.RegisterRequest;
-import com.learning.basic.basicspriongboot.model.RegisterResponse;
-import com.learning.basic.basicspriongboot.service.UserService;
+import basic.springboot.model.RegisterRequest;
+import basic.springboot.model.RegisterResponse;
+import basic.springboot.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

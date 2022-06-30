@@ -1,4 +1,4 @@
-package com.learning.basic.basicspriongboot;
+package basic.springboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.validation.beanvalidation.MethodValidationPostProcessor;
 
 @SpringBootTest
-class BasicSpriongBootApplicationTests {
+class BasicSpringBootApplicationTests {
 
 	@Test
 	void contextLoads() {
